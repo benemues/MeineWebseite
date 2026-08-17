@@ -217,6 +217,20 @@
     .lede { color: #2a2a2a; max-width: 56ch; }
     .lede + .lede { margin-top: 16px; }
 
+    /* ---- Klavier ---- */
+    .piano-body { display: flex; align-items: flex-start; gap: 40px; }
+    .piano-body .lede { flex: 1; }
+    .piano-photo {
+      width: 280px; max-width: 40%;
+      aspect-ratio: 3 / 4;
+      height: auto; border-radius: 10px;
+      object-fit: cover; flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .piano-body { flex-direction: column; align-items: stretch; }
+      .piano-photo { width: 100%; max-width: 100%; aspect-ratio: 3 / 2; }
+    }
+
     /* ---- Projekte ---- */
     .items { display: grid; gap: 2px; }
     .item {
@@ -271,9 +285,13 @@
     }
     .carousel-track img {
       width: 100%;
-      height: auto;
+      height: 420px;
+      object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
+    }
+    @media (max-width: 640px) {
+      .carousel-track img { height: 260px; }
     }
     .carousel-track figure:hover img { transform: scale(1.04); }
     .carousel-track figcaption {
@@ -485,12 +503,15 @@
             <span class="sec-num">03</span>
             <h2>Clavichordium</h2>
         </div>
-        <p class="lede">
-        Iam sex annos clavichordium pulso. Clavichordium pulsare est id diei tempus,
-        quo vere requiescere possum. Libenter opera
-        Chopin et Tchaikovsky ludo, sed etiam disco
-        musicam iazensem ex tempore canere. Optate mihi fortunam!
-      </p>
+        <div class="piano-body">
+          <p class="lede">
+          Iam sex annos clavichordium pulso. Clavichordium pulsare est id diei tempus,
+          quo vere requiescere possum. Libenter opera
+          Chopin et Tchaikovsky ludo, sed etiam disco
+          musicam iazensem ex tempore canere. Optate mihi fortunam!
+        </p>
+          <img class="piano-photo" src="bilder/klavier.jpg" alt="Clavichordium pulsans" loading="lazy" />
+        </div>
     </section>
 
     <!-- ======= Work / Projekte ======= -->
@@ -508,7 +529,7 @@
           <span class="t">Analysis algorithmi optimizationis Bayesianae <span class="arrow">→</span></span>
           <span class="meta">Physica · 2025</span>
         </a>
-        <a class="item" href="https://github.com/SunkenPotato/jf26">
+        <a class="item" href="dokumente/jf-abstract.pdf" target="_blank" rel="noopener">
           <span class="t">Inceptum «Jugend forscht» <span class="arrow">→</span></span>
           <span class="meta">Mathematica · 2026</span>
         </a>

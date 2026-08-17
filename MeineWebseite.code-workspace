@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "MeineWebseite",
+			"path": "."
+		},
+		{
+			"name": "geist-font",
+			"path": "../../../Downloads/geist-font"
+		}
+	],
+	"settings": {}
+}
